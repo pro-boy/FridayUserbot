@@ -46,13 +46,13 @@ async def start(event):
     hmmwow = devlop.first_name
     vent = event.chat_id
     mypic = Config.ASSISTANT_START_PIC
-    starttext = f"Hello {firstname},\nNice To Meet You! I'm CrackXBot. \n\nMy Master: [{hmmwow}](tg://user?id={bot.uid}) \nYou Can Talk/Contact My Master Using This Bot. \n\nIf You Want Your Own Assistant You Can Deploy From Button Below. \n\nPowered By [Friday Userbot](t.me/FridayOT)"
+    starttext = f"Hello {firstname},\nNice To Meet You! I'm [CrackXBot](t.me/CrackxCreator). \n\nMy Master: [{hmmwow}](tg://user?id={bot.uid}) \nYou Can Talk/Contact My Master Using This Bot. \n\nNOTE: All your messages here will be forwared to my MASTER\n"
     if event.sender_id == bot.uid:
         await tgbot.send_message(
             vent,
             message=f"Hi Master, It's Me {bot_id}, Your Assistant ! \nWhat You Wanna Do today ?",
             buttons=[
-                [custom.Button.inline("Show Users 🔥", data="users")],
+                [custom.Button.inline("Show Usere", data="users")],
                 [custom.Button.inline("Commands For Assistant", data="gibcmd")],
                 [
                     Button.url(
@@ -72,8 +72,9 @@ async def start(event):
             caption=starttext,
             link_preview=False,
             buttons=[
-                [custom.Button.inline("Deploy your Friday 🇮🇳", data="deploy")],
-                [Button.url("Help Me ❓", "t.me/Fridayot")],
+                [custom.Button.inline("About Me, data="deploy")],
+                [Button.url("My Master", "t.me/CrackxCreator")],
+                [Button.url("Anime", "t.me/AnimeGraphicz")],
             ],
         )
         if os.path.exists(mypic):
@@ -89,7 +90,7 @@ async def help(event):
     if event.query.user_id is not bot.uid:
         await tgbot.send_message(
             event.chat_id,
-            message="You Can Deploy Friday In Heroku By Following Steps Bellow, You Can See Some Quick Guides On Support Channel Or On Your Own Assistant Bot. \nThank You For Contacting Me.",
+            message="Hy,",
             buttons=[
                 [Button.url("Deploy Tutorial 📺", "https://youtu.be/xfHcm_e92eQ")],
                 [Button.url("Need Help ❓", "t.me/FridaySupportOfficial")],
