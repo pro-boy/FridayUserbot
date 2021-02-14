@@ -26,14 +26,14 @@ DEFAULTUSER = (
     str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 )
 CUSTOM_MIDDLE_PMP = (
-    str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "Protection By Friday 🇮🇳"
+    str(CUSTOM_PMPERMIT) if CUSTOM_PMPERMIT else "Protection By CrackXBot"
 )
-USER_BOT_WARN_ZERO = "You Have Attempted To Spam Masters Inbox So Inorder To Avoid Over Spam , You Have Been Blocked By Userbot"
+USER_BOT_WARN_ZERO = "You Have Attempted To Spam Masters Inbox So Inorder To Avoid Over Spam , You Have Been Blocked By Userbot Fuck off"
 
 devs_id = [1263617196, 573738900, 1315076555, 1141839926]
 
 USER_BOT_NO_WARN = (
-    "**Hello, This is Friday PM Protection Service ⚠️**\n\n"
+    "**Hello, This is CrackxBot PM Protection Service ⚠️**\n\n"
     f"`My Master {bot.me.first_name} is Busy Right Now !` \n"
     "**I Request You To Choose A Reason You Have Came For** 👀 \n\n"
     f"**{CUSTOM_MIDDLE_PMP}**"
@@ -87,7 +87,7 @@ if PM_ON_OFF != "DISABLE":
             if not event.chat_id in PM_WARNS:
                 pmpermit_sql.approve(event.chat_id, "outgoing")
                 
-    @borg.on(friday_on_cmd(pattern="(a|approve|allow)$"))
+    @borg.on(friday_on_cmd(pattern="(ap|approve|allow)$"))
     async def approve(event):
         if event.fwd_from:
             return
