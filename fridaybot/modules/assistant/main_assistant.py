@@ -75,6 +75,7 @@ async def start(event):
                 [custom.Button.inline("About Me, data="deploy")],
                 [Button.url("My Master", "t.me/CrackxCreator")],
                 [Button.url("Anime", "t.me/AnimeGraphicz")],
+                [Button.url("Crazy Creators", "t.me/CrazyCreatorz")]
             ],
         )
         if os.path.exists(mypic):
@@ -90,10 +91,9 @@ async def help(event):
     if event.query.user_id is not bot.uid:
         await tgbot.send_message(
             event.chat_id,
-            message="Hy,",
+            message="Hy, I Am CrackXBot \n\nI Am A Python3 Running Bot.\nBot Created By: @CrackxCreator \n👥 Group: @CrazyCreatorz\nThat's All I could Come up with\n",
             buttons=[
-                [Button.url("Deploy Tutorial 📺", "https://youtu.be/xfHcm_e92eQ")],
-                [Button.url("Need Help ❓", "t.me/FridaySupportOfficial")],
+                [Button.url("AboutCrackX", "https://t.me/AboutCrackX")],                
             ],
         )
 
